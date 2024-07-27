@@ -2,7 +2,7 @@ spring:
     datasource:
         username: root
         password: Pei1234+-
-        url: jdbc:mysql://localhost:3306/db-movies
+        url: jdbc:mysql://localhost:3306/db-movies       
     jpa:
         hibernate:
             ddl-auto: update
@@ -12,4 +12,7 @@ spring:
                 format_sql: true
 
 project:
-    poster: api-movie/posters/                
+    poster: api-movie/posters/  
+
+base:
+    url: "http://localhost:8080"                  

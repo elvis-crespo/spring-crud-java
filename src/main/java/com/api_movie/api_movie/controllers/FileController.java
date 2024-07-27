@@ -37,7 +37,7 @@ public class FileController {
         return ResponseEntity.ok("File uploaded: " + uploadFileName);
     } 
 
-    @GetMapping("/{fileName}")
+    @GetMapping(value = "/{fileName}")
     public void serverFileHandler(@PathVariable String fileName, HttpServletResponse response) throws IOException{
         InputStream resourceFile = fileService.getResourceFile(path, fileName);
         response.setContentType(org.springframework.http.MediaType.IMAGE_PNG_VALUE);
