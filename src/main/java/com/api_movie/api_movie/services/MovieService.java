@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.api_movie.api_movie.dtos.MovieDTO;
+import com.api_movie.api_movie.dtos.MoviePageResponse;
 
 public interface MovieService {
 
@@ -19,4 +20,7 @@ public interface MovieService {
 
     String deleteMovie(Integer movieId) throws IOException;
 
+    MoviePageResponse getAllMoviesWithPagination(Integer pageNumber, Integer pageSize);
+
+    MoviePageResponse getAllMoviesWithPaginationAndSort(Integer pageNumber, Integer pageSize, String sortBy, String dir);
 }
