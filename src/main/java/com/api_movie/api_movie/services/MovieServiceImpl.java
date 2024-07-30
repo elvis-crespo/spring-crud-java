@@ -160,7 +160,7 @@ public class MovieServiceImpl implements MovieService{
         );
 
         // Save the updated movie
-        Movie updatedMovie = movieRepository.save(movie);
+        movieRepository.save(movie);
 
         String posterURL = baseURL + "/file/" + fileName;
 
